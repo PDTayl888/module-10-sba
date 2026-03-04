@@ -29,7 +29,7 @@ const Category = () => {
 
       <div>
         {data.meals.map((recipe) => (
-            <RecipeCard key={recipe.idMeal} recipe={recipe} />)}
+            <RecipeCard key={recipe.idMeal} recipe={recipe} />))}
       </div>
     </div>
   );
