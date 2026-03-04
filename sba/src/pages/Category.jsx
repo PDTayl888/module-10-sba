@@ -17,11 +17,7 @@ const Category = () => {
         LOADING...
       </div>
     );
-  if (error)
-    return (
-      <div>ERROR in CATEGORY</div>
-    );
-
+if (error) return <ErrorMessage message={error} />;
   return (
     <div>
       <h1>

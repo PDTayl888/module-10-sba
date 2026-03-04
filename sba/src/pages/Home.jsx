@@ -1,5 +1,6 @@
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import Spinner from '../components/Spinner';
 
 const Home = () => {
   console.log("@@@@ HOME LOADED @@@@@@@");
@@ -10,8 +11,8 @@ const Home = () => {
   const showCategories = data?.categories?.slice(0, 2) || [];
   //console.log(showCategories[0].strCategory);
 
-  if (loading) return <p>LOADING</p>;
-  if (error) return <p>ERROR Home</p>;
+  if (loading) return <Spinner></Spinner>;
+  if (error) return <ErrorMessage message={error} />;
 
   return (
     <div>
