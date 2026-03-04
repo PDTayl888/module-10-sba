@@ -1,16 +1,25 @@
 import { useState, useEffect } from "react";
 
 const useLocalStorage = (recipes) => {
-  const [saveRecipes, setSaveRecipes] = useState(() => {
-    const item = localStorage.getItem("fav-recipes");
-    return item ? JSON.parse(item) : recipes;
+  const [savedRecipes, setSavedRecipes] = useState(() => {
+    try {
+      const item = localStorage.getItem("fav-recipes");
+      return item ? JSON.parse(item) : recipes;
+    } catch (error) {
+      console.error(error);
+      return recipes;
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem("fav-recipes", saveRecipes);
-  }, [saveRecipes]);
+    try {
+      localStorage.setItem("fav-recipes", JSON.stringify(savedRecipes));
+    } catch (error) {
+      console.error(error);
+    }
+  }, [savedRecipes]);
 
-  return [saveRecipes, setSaveRecipes];
+  return [savedRecipes, setSavedRecipes];
 };
 
 export default useLocalStorage;
