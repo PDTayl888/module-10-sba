@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useFavorites } from '../context/FavoritesContext';
+import FavoritesProvider from '../context/FavoritesContext';
+import { useContext } from 'react';
 
 const RecipeCard = ({ recipe }) => {
     const { idMeal, strMeal, strMealThumb } = recipe;
-    const { isFavorite, addToFavorites, removeFromFavorites } = useFavorites();
+    const { isFavorite, addToFavorites, removeFromFavorites } = useContext(FavoritesProvider);
     const favorited = isFavorite(idMeal);
     const toggleFav = (e) => {
         e.preventDefault();

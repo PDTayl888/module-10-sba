@@ -25,7 +25,7 @@ const Search = () => {
       {error && <p>ERROR: {error}</p>}
 
       <div>
-        {data.meals.map((recipe) => (
+        {data?.meals?.map((recipe) => (
             <RecipeCard key={recipe.idMeal} recipe={recipe} />
           ))}
       </div>

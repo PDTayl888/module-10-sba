@@ -1,9 +1,12 @@
 import "./App.css";
-import { FavoritesProvider } from "./context/FavoritesContext";
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
+import FavoritesProvider from './context/FavoritesContext';
 import NavBar from "./components/NavBar";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import RecipeDetail from "./pages/RecipeDetail";
+import Home from './pages/Home';
+import Category from './pages/Category';
 
 function App() {
   return (
