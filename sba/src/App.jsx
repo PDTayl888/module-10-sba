@@ -11,7 +11,7 @@ import Category from './pages/Category';
 function App() {
   return (
     <FavoritesProvider>
-      <Router>
+      {/* <Router> */}
         <NavBar></NavBar>
 
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
         </Routes>
-      </Router>
+      {/* </Router> */}
     </FavoritesProvider>
   );
 }

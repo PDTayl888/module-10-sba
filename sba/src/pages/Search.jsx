@@ -12,7 +12,7 @@ const Search = () => {
   return (
     <div>
       <h1>SEARCH FOR RECIPE: </h1>
-
+ 
       <input
         type="text"
         placeholder="search here..."

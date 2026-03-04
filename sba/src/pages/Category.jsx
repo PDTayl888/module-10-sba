@@ -4,6 +4,7 @@ import RecipeCard from "../components/RecipeCard";
 
 const Category = () => {
   const { categoryName } = useParams();
+  console.log(`######## ${categoryName}`)
 
   const { data, loading, error } = useFetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`,
@@ -18,7 +19,7 @@ const Category = () => {
     );
   if (error)
     return (
-      <div>ERROR</div>
+      <div>ERROR in CATEGORY</div>
     );
 
   return (

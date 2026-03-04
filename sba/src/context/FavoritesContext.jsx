@@ -1,13 +1,13 @@
 import { createContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
-const FavoritesContext = createContext();
+export const FavoritesContext = createContext();
 
 const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useLocalStorage([]);
 
   const addToFavorites = (recipe) => {
-    setFavorites(...favorites, recipe);
+    setFavorites([...favorites, recipe]);
   };
 
   const removeFromFavorites = (id) => {
