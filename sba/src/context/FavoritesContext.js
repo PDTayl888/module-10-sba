@@ -4,18 +4,18 @@ import useLocalStorage from "../hooks/useLocalStorage";
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = () => {
-    const [saveRecipes, setSaveRecipes] = useLocalStorage('');
+    const [saveRecipes, setSaveRecipes] = useLocalStorage([]);
 
-    const addToFavorites = () => {
-
+    const addToFavorites = (recipe) => {
+        setSaveRecipes(...saveRecipes, recipe);
     }
 
-    const removeFromFavorites = () = {
-
+    const removeFromFavorites = (recipe) = {
+        setSaveRecipes(saveRecipes.filter(recipe => ))
     }
 
     isFavorite = () => {
-
+        return 
     }
 
     return (
