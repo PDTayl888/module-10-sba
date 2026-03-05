@@ -19,14 +19,15 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <div style={{ border: '5px solid white'}}>
+    <div style={{ border: '5px solid purple', borderRadius: '12px'}}>
       <Link to={`/recipe/${idMeal}`}>
         <img
           style={{
-            width: "50%",
+            width: "100%",
             maxWidth: "200px",
             height: "150px",
             objectFit: "cover",
+            borderRadius: '12px'
           }}
           src={strMealThumb}
           alt={strMeal}

@@ -8,7 +8,7 @@ const Home = () => {
     "https://www.themealdb.com/api/json/v1/1/categories.php",
   );
 
-  const showCategories = data?.categories?.slice(0, 2) || [];
+  const showCategories = data?.categories?.slice(0, 15) || [];
   //console.log(showCategories[0].strCategory);
 
   if (loading) return <Spinner></Spinner>;
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <h3>CATEGORIES</h3>
+      <p>CATEGORIES</p>
       <ul>
         {showCategories.map((cat) => (
           <li key={cat.idCategory}>

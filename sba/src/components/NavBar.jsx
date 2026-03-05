@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 
+const linkStyle = {
+  color: '#43213d',
+ fontWeight: '700'  
+}
+
 const NavBar = () => {
   return (
     <nav>
       <div>
-        <Link to="/">RECIPE FINDER</Link>
+        <Link style={linkStyle} to="/">RECIPE FINDER</Link>
       </div>
 
       <ul>

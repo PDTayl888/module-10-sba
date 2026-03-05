@@ -5,10 +5,27 @@
   text-align: center;
 }
 
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ee9696;
+  color: #671167;
+  margin: 0;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.link {
+  color: #96bc69;
+}
+
 
 .logo {
   height: 6em;
@@ -43,5 +60,5 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #96bc69;
 }
