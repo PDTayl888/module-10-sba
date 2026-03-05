@@ -1,0 +1,3 @@
+The Recipe Finder app offers a convenient way to find fun recipes. The user can search a list of popular categories or enter search terms for a more streamlined search experience. Simply click the favorite button on each recipe card to save individual recipes to the favorites list. Click on the initial recipe card for a more detailed description of the recipe ingredients and instructions. 
+
+To run simply clone or download repo. In terminal navigate to the sba folder and type 'npm run dev' App will open in browser at localhost:5173.
